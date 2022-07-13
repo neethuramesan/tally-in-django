@@ -1,0 +1,236 @@
+{% extends 'base.html'%}
+{% block body %}
+{% load static %}
+        <style>
+            .container{
+                display: flex;
+                height:40vh;
+                align-items: center;
+                justify-content: center;
+            }
+        .form1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            
+        }
+        form{
+            padding:30px;
+        }
+        .close {
+            position: absolute;
+            top: 3px;
+            right: 8px;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            transform: rotate(45deg);
+            cursor: pointer;
+            text-decoration: none;
+            
+        }
+        button{
+            background-color:rgb(103, 175, 220) ;
+            color:white;
+            padding:10px 20px;
+        }
+    </style>
+    <div class="container">
+        <div class="form1"style=" background-color:rgba(0,0,0,0.3);">
+            <a href="javascript:history.go(-1);" class="close">+</a>
+            <h5 style="background-color:rgb(103, 175, 220) ; color:white; text-align: center; padding: 5px 0; width:100%;">Features</h5>
+            <form action="" method="post">
+                {% comment %} <div><p>Nam</p></div>
+            <input type="text">
+            <div><p>(Alias)</p></div>
+            <input type="text">
+            <div><p>Under</p></div>
+            <select name="primary" id="primary">
+                <option value="primary">Primary</option>
+            </select>
+            <div><p>Nature Of Group</p></div>
+            <select name="under" id="under">
+                <option value="Bank Account">Liabilities</option>
+                <option value="Bank OCC A/c">Assets</option>
+                
+            </select>
+            <hr>
+            <div><p>Group behaves like sub-ledger</p></div>
+            <select name="sub-ledger" id="sub-ledger">
+                <option value="No">No</option> 
+                <option value="Yes">Yes</option>
+                 
+            </select>
+            <div><p>Net Debit/Credit Balances for reporting</p></div>
+            <select name="sub-ledger" id="sub-ledger">
+                <option value="No">No</option> 
+                <option value="Yes">Yes</option>
+              
+            </select>
+            <div><p>Used for Calculations(for example :tax,discounts)</p></div>
+            <select name="sub-ledger" id="sub-ledger">
+                <option value="No">No</option> 
+                <option value="Yes">Yes</option>
+               
+            </select>
+            <p>(For sale invoice entries)</p>
+            <div><p>Method to Allocate when used in purchase invoice</p></div>
+            <select name="sub-ledger" id="sub-ledger">
+                <option value="Yes">Not Applicable</option>
+                <option value="No">Appropriate by Qty</option>
+                <option value="No">Appropriate by value</option>    
+            </select>
+            
+<button><h5>ALTER</h5></button> {% endcomment %}
+<div class="row">
+    <div class="col-lg-8">
+        <label>Show more features</label>
+    </div>
+    <div class="col-md-3">
+        <select name="sel">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+        
+        </select>
+    </div>
+    
+</div>
+<br>
+<div class="row">
+    <div class="col-md-8">
+        <label>Show all features</label>
+    </div>
+    <div class="col-md-3">
+        <select name="sel">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+        
+        </select>
+    </div>
+    
+</div>
+<br>
+
+<br>
+<div class="row">
+    <div class="col-md-2">
+        <label><u>Accounting</u></label>
+    </div>
+    <div class="col-md-5">
+        
+    </div>
+</div>  
+<br>
+<div class="row">
+    <div class="col-md-8">
+        <label>Maintain Accounts</label>
+    </div>
+    <div class="col-md-3">
+        <select name="sel">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+        
+        </select>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-8">
+        <label>Enable bill wise entry</label>
+    </div>
+    <div class="col-md-3">
+        <select name="sel">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+        
+        </select>
+    </div></div><br>
+    <div class="row">
+        <div class="col-md-8">
+            <label>Enable cost centres</label>
+        </div>
+        <div class="col-md-3">
+            <select name="sel">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+            
+            </select>
+        </div>
+    </div><br>
+        <div class="row">
+            <div class="col-md-8">
+                <label>Enable interest calculation</label>
+            </div>
+            <div class="col-md-3">
+                <select name="sel">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+                
+                </select>
+            </div>
+        </div>
+        <br>
+<div class="row">
+    <div class="col-md-2">
+        <label><u>Inventory</u></label>
+    </div>
+    <div class="col-md-5">
+        
+    </div>
+</div>  
+<br>
+<div class="row">
+    <div class="col-md-8">
+        <label>Maintain Inventory</label>
+    </div>
+    <div class="col-md-3">
+        <select name="sel">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+        
+        </select>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-8">
+        <label>Integrate accounts with Inventory</label>
+    </div>
+    <div class="col-md-3">
+        <select name="sel">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+        
+        </select>
+    </div></div><br>
+    <div class="row">
+        <div class="col-md-8">
+            <label>Enable multipe price levels </label>
+        </div>
+        <div class="col-md-3">
+            <select name="sel">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+            
+            </select>
+        </div>
+    </div><br>
+        <div class="row">
+            <div class="col-md-8">
+                <label>Enable batches</label>
+            </div>
+            <div class="col-md-3">
+                <select name="sel">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+                
+                </select>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
